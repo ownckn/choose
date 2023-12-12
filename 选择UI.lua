@@ -41,17 +41,20 @@ function Library:CreateWindow(windowname,windowinfo)
   Switch.BackgroundTransparency = 0.5
   Switch.Position = UDim2.new(0.2, 0, 0, 0)
   Switch.Size = UDim2.new(0, 50, 0, 50)
-  Switch.Image = "rbxassetid://15571104634"
+  Switch.Image = "rbxassetid://15426655759"
 
   SwitchCorner.CornerRadius = UDim.new(0.5, 0)
   SwitchCorner.Name = "SwitchCorner"
   SwitchCorner.Parent = Switch
 
+  local uitoggled = false
   Switch.MouseButton1Click:Connect(function()
-    if Frame.Visible then
-      Frame.Visible = false
+    if uitoggled == false then
+      Frame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
+      uitoggled = true
      else
-      Frame.Visible = true
+      Frame:TweenSize(UDim2.new(0, 432, 0, 285), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
+      uitoggled = false
     end
   end)
 
