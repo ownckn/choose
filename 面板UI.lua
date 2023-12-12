@@ -986,7 +986,7 @@ DRR["77"]["BackgroundColor3"] = Color3.fromRGB(0, 255, 39);
 DRR["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 DRR["77"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
 DRR["77"]["BackgroundTransparency"] = 1;
-DRR["77"]["PlaceholderText"] = [[Input Here...]];
+DRR["77"]["PlaceholderText"] = [[请输入内容]];
 DRR["77"]["Size"] = UDim2.new(1, 0, 0.59375, 0);
 DRR["77"]["Selectable"] = false;
 DRR["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
@@ -1304,7 +1304,7 @@ function UILIB:Load(name, img, direction)
         task.spawn(function()
 	     while true do
 		task.wait(0.1)
-		parent.TopBar.ProfileMenu.Clock.TextLabel.Text = os.date("%H:%m")
+		parent.TopBar.ProfileMenu.Clock.TextLabel.Text = os.date("北京时间:"..os.date("%H").."时"..os.date("%M").."分")
 	     end
         end)
 	parent.TopBar.ProfileMenu.Title.TextLabel.Text = name
