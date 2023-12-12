@@ -47,14 +47,11 @@ function Library:CreateWindow(windowname,windowinfo)
   SwitchCorner.Name = "SwitchCorner"
   SwitchCorner.Parent = Switch
 
-  local uitoggled = false
   Switch.MouseButton1Click:Connect(function()
-    if uitoggled == false then
-      Frame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
-      uitoggled = true
+    if Frame.Visible then
+      Frame.Visible = false
      else
-      Frame:TweenSize(UDim2.new(0, 432, 0, 285), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
-      uitoggled = false
+      Frame.Visible = true
     end
   end)
 
