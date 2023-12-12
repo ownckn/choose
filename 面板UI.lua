@@ -1304,7 +1304,7 @@ function UILIB:Load(name, img, direction)
         task.spawn(function()
 	     while true do
 		task.wait(0.1)
-		parent.TopBar.ProfileMenu.Clock.TextLabel.Text = os.date("北京时间:"..os.date("%H").."时"..os.date("%M").."分")
+		parent.TopBar.ProfileMenu.Clock.TextLabel.Text = os.date("%H:%m")
 	     end
         end)
 	parent.TopBar.ProfileMenu.Title.TextLabel.Text = name
