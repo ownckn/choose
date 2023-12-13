@@ -25,7 +25,7 @@ DRR["3"]["CornerRadius"] = UDim.new(0.10000000149011612, 0);
 -- DrRay.TopBar.ScrollingFrame
 DRR["4"] = Instance.new("ScrollingFrame", DRR["2"]);
 DRR["4"]["Active"] = true;
-DRR["4"]["ScrollingDirection"] = Enum.ScrollingDirection.Y;
+DRR["4"]["ScrollingDirection"] = Enum.ScrollingDirection.X;
 DRR["4"]["BorderSizePixel"] = 0;
 DRR["4"]["CanvasSize"] = UDim2.new(0.10000000149011612, 0, 0, 0);
 DRR["4"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 36);
